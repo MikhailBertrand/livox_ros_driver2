@@ -80,29 +80,31 @@ source /opt/ros/humble/setup.sh
 
 ```shell
 source ../../devel/setup.sh
-roslaunch livox_ros_driver2 [launch file]
+roslaunch livox_ros_driver2 [launch file] user_config_path:=[config file path]
 ```
 
-in which,  
+in which,
 
 * **livox_ros_driver2** : is the ROS package name of Livox ROS Driver 2;
-* **[launch file]** : is the ROS launch file you want to use; the 'launch_ROS1' folder contains several launch samples for your reference;  
+* **[launch file]** : is the ROS launch file you want to use; the 'launch_ROS1' folder contains several launch samples for your reference;
+* **[config file path]** : is the path of the LiDAR config file (JSON); defaults to the sample files contained in the 'config' folder.
 
 An rviz launch example for HAP LiDAR would be:
 
 ```shell
-roslaunch livox_ros_driver2 rviz_HAP.launch
+roslaunch livox_ros_driver2 rviz_HAP.launch user_config_path:=[config file path]
 ```
 
 #### For ROS2:
 ```shell
 source ../../install/setup.sh
-ros2 launch livox_ros_driver2 [launch file]
+ros2 launch livox_ros_driver2 [launch file] user_config_path:=[config file path]
 ```
 
-in which,  
+in which,
 
 * **[launch file]** : is the ROS2 launch file you want to use; the 'launch_ROS2' folder contains several launch samples for your reference.
+* **[config file path]** : is the path of the LiDAR config file (JSON); defaults to the sample files contained in the 'config' folder.
 
 A rviz launch example for HAP LiDAR would be:
 
